@@ -23,7 +23,7 @@ public class UserDaoImp implements UserDao
     @Override
     public int add(User user)
     {
-        String sql = "insert int user(id,name,passwd)";
+        String sql = "insert user values(id,name,passwd)";
         NamedParameterJdbcTemplate npjt = new NamedParameterJdbcTemplate(this.jdbcTemplate.getDataSource());
         return npjt.update(sql, new BeanPropertySqlParameterSource(user));
         //return 0;
@@ -52,7 +52,8 @@ public class UserDaoImp implements UserDao
     @Override
     public List<Map<String, Object>> queryUserListMap()
     {
-        String sql = "select * form user";
+        //String sql = "select * form study.user";
+        String sql = "select * from study.user";
         return this.jdbcTemplate.queryForList(sql);
     }
 

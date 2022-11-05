@@ -1,12 +1,17 @@
 server:
-  port: 8080
+  port: 8081
+
 
 spring:
   datasource:
     username: root
     password: '123456'
-    url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/study?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  level:
+    root: info
 
 #使用druid
 #spring:
@@ -69,4 +74,5 @@ spring:
 #      filter:
 #        stat:
 #          log-slow-sql: true
+
 #
