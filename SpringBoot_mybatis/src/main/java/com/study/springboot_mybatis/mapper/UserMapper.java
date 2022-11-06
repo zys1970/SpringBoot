@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Mapper
 public interface UserMapper
 {
-    @Insert("INSERT INTO USER VALUSE(#{id},#{name},#{passwd})")
+    @Insert("INSERT INTO USER VALUES(#{id},#{name},#{passwd})")
     int add(User user);
 
     @Update("UPDATE USER SET NAME = #{name},PASSWD = #{passwd} WHERE ID = #{id}")
